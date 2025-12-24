@@ -20,6 +20,7 @@ def get_snowpark_session():
 
         from snowflake.snowpark import Session
 
+        # NB This uses .streamlit/secrets.toml
 
         session = Session.builder.configs({
             "account": st.secrets["connections"]["snowflake"]["account"],
